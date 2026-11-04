@@ -1,0 +1,835 @@
+{
+ "_what_is": "One entry per type of business you want to find. 'osm' = OpenStreetMap tag filters [key, regex] (a business matches if ANY filter matches); 'searches' = web search terms (Brave) combined with each city; 'keywords' = words that confirm on the company's own site that it is this type of business (signal S); 'subject' and 'block' = the email subject and the paragraph describing what you offer this sector, one per locale; 'offer' = which entry of variants.json the sector uses; 'priority' 1 = best, 3 = worst; 'active': false switches a sector off. 'always_exclude' lists what is never contacted, whatever the sector.",
+ "sectors": [
+  {
+   "id": "food",
+   "name": "Food and beverage makers",
+   "priority": 1,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "craft",
+     "bakery|brewery|winery|distillery|confectionery|caterer|cheese|coffee_roaster|butcher"
+    ],
+    [
+     "industrial",
+     "food|brewery|bakery|beverage|meat|dairy"
+    ]
+   ],
+   "searches": [
+    "food manufacturer",
+    "food distributor",
+    "bakery wholesale",
+    "beverage company",
+    "food packing company"
+   ],
+   "keywords": [
+    "fda",
+    "fsma",
+    "haccp",
+    "food safety",
+    "wholesale",
+    "distribution",
+    "manufactur",
+    "facility",
+    "export",
+    "import",
+    "private label",
+    "co-packing"
+   ],
+   "subject": {
+    "es": "etiquetas y manuales de su planta en español",
+    "en": "your labels and plant procedures in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que una empresa de alimentos escribe: fichas técnicas, etiquetas, procedimientos de inocuidad, capacitación del personal de planta y contratos con proveedores. Cada proyecto lleva un glosario, para que el mismo término diga lo mismo en todos los documentos.",
+    "en": "I translate what food companies write themselves, such as spec sheets, labels, food safety procedures, plant staff training and supplier contracts. Each project keeps a glossary, so the same term reads the same in every document."
+   }
+  },
+  {
+   "id": "manufacturing",
+   "name": "Manufacturing and industry",
+   "priority": 1,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "industrial",
+     "."
+    ],
+    [
+     "man_made",
+     "works"
+    ],
+    [
+     "craft",
+     "metal_construction|cabinet_maker|upholsterer|window_construction|stonemason|sawmill|welder"
+    ]
+   ],
+   "searches": [
+    "manufacturing company",
+    "fabrication shop",
+    "industrial supplier",
+    "plastics manufacturer",
+    "metal fabrication"
+   ],
+   "keywords": [
+    "manufactur",
+    "fabricat",
+    "plant",
+    "warehouse",
+    "iso 9001",
+    "osha",
+    "safety",
+    "export",
+    "distributors"
+   ],
+   "subject": {
+    "es": "manuales de seguridad y procedimientos en español",
+    "en": "your safety manuals and procedures in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que escribe una planta: manuales de seguridad, procedimientos de trabajo, capacitación, fichas técnicas y garantías. Cada proyecto lleva un glosario, para que el mismo término diga lo mismo en todos los documentos.",
+    "en": "I translate what plants write themselves, such as safety manuals, work procedures, training, spec sheets and warranties. Each project keeps a glossary, so the same term reads the same in every document."
+   }
+  },
+  {
+   "id": "construction",
+   "name": "Construction and contractors",
+   "priority": 1,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "craft",
+     "roofer|hvac|electrician|plumber|builder|carpenter|painter|tiler|floorer|plasterer|glaziery|insulation|scaffolder|landscaper|gardener|pool"
+    ],
+    [
+     "office",
+     "construction_company|contractor"
+    ]
+   ],
+   "searches": [
+    "general contractor",
+    "roofing company",
+    "construction company",
+    "hvac company",
+    "landscaping company"
+   ],
+   "keywords": [
+    "licensed",
+    "insured",
+    "osha",
+    "crew",
+    "commercial",
+    "residential",
+    "warranty",
+    "estimates",
+    "projects"
+   ],
+   "subject": {
+    "es": "manuales de seguridad para sus cuadrillas",
+    "en": "safety material for your crews in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que una constructora escribe: manuales y charlas de seguridad, el manual del empleado, contratos con clientes y garantías. Cada proyecto lleva un glosario, para que el mismo término diga lo mismo en todos los documentos.",
+    "en": "I translate what contractors write themselves, such as safety manuals and toolbox talks, the employee handbook, client contracts and warranties. Each project keeps a glossary, so the same term reads the same in every document."
+   }
+  },
+  {
+   "id": "logistics",
+   "name": "Logistics, transport and import",
+   "priority": 1,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "office",
+     "logistics|moving_company|courier|freight_forwarder|shipping_agent|import|export"
+    ],
+    [
+     "shop",
+     "wholesale"
+    ]
+   ],
+   "searches": [
+    "freight forwarder",
+    "logistics company",
+    "import export company",
+    "trucking company",
+    "customs broker"
+   ],
+   "keywords": [
+    "latin america",
+    "latinoamérica",
+    "freight",
+    "cargo",
+    "customs",
+    "aduana",
+    "import",
+    "export",
+    "shipping",
+    "drivers"
+   ],
+   "subject": {
+    "es": "contratos y documentos de embarque en español",
+    "en": "contracts and shipping documents in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que una empresa de logística maneja con clientes y socios de Latinoamérica: contratos, condiciones de servicio, documentos de embarque y el manual del conductor. Cada proyecto lleva un glosario, para que el mismo término diga lo mismo en todos los documentos.",
+    "en": "I translate what logistics companies exchange with Latin American clients and partners, such as contracts, terms of service, shipping documents and the driver handbook. Each project keeps a glossary, so the same term reads the same in every document."
+   }
+  },
+  {
+   "id": "health",
+   "name": "Clinics and medical practices",
+   "priority": 1,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "healthcare",
+     "clinic|doctor|dentist|physiotherapist|centre|alternative|rehabilitation|optometrist|podiatrist|psychotherapist|laboratory|speech_therapist"
+    ],
+    [
+     "amenity",
+     "clinic|doctors|dentist"
+    ]
+   ],
+   "searches": [
+    "medical clinic",
+    "dental office",
+    "physical therapy clinic",
+    "pediatric clinic",
+    "urgent care"
+   ],
+   "keywords": [
+    "patients",
+    "pacientes",
+    "insurance",
+    "medicare",
+    "medicaid",
+    "new patient",
+    "intake",
+    "forms"
+   ],
+   "subject": {
+    "es": "formularios para pacientes en español",
+    "en": "your patient forms in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que el consultorio entrega al paciente: paquete de admisión, consentimientos, instrucciones de alta y cartas. Cada proyecto lleva un glosario, para que el mismo término diga lo mismo en todos los formularios.",
+    "en": "I translate what practices hand to patients, such as intake packets, consent forms, discharge instructions and letters. Each project keeps a glossary, so the same term reads the same across every form."
+   }
+  },
+  {
+   "id": "care",
+   "name": "Care homes, home care and social services",
+   "priority": 1,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "amenity",
+     "nursing_home|social_facility"
+    ],
+    [
+     "healthcare",
+     "nursing_home|hospice|home_care"
+    ],
+    [
+     "social_facility",
+     "."
+    ]
+   ],
+   "searches": [
+    "home health agency",
+    "assisted living facility",
+    "adult day care",
+    "home care agency"
+   ],
+   "keywords": [
+    "caregivers",
+    "families",
+    "residents",
+    "home health",
+    "assisted living",
+    "medicaid",
+    "care plan"
+   ],
+   "subject": {
+    "es": "documentos para las familias en español",
+    "en": "your family and resident documents in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que una residencia o agencia de cuidado entrega a las familias: contratos de servicio, planes de cuidado, avisos y el manual de los cuidadores. Cada proyecto lleva un glosario, para que el mismo término diga lo mismo en todos los documentos.",
+    "en": "I translate what care providers hand to families, such as service agreements, care plans, notices and the caregiver handbook. Each project keeps a glossary, so the same term reads the same in every document."
+   }
+  },
+  {
+   "id": "funeral",
+   "name": "Funeral homes",
+   "priority": 1,
+   "active": true,
+   "offer": "referrals_funeral",
+   "osm": [
+    [
+     "shop",
+     "funeral_directors"
+    ],
+    [
+     "amenity",
+     "funeral_hall|crematorium"
+    ]
+   ],
+   "searches": [
+    "funeral home",
+    "funeral home repatriation"
+   ],
+   "keywords": [
+    "repatriation",
+    "repatriación",
+    "cremation",
+    "families",
+    "pre-planning",
+    "latin america"
+   ],
+   "subject": {
+    "es": "actas de defunción y documentos de otros países",
+    "en": "death certificates and documents from other countries"
+   },
+   "block": {
+    "es": "Traduzco con certificado firmado las actas de defunción, de nacimiento y de matrimonio que traen las familias de otro país, y los documentos que pide un consulado para una repatriación.",
+    "en": "I translate, with a signed certificate, the death, birth and marriage records families bring from other countries, and the documents a consulate asks for in a repatriation."
+   }
+  },
+  {
+   "id": "veterinary",
+   "name": "Veterinary clinics",
+   "priority": 2,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "amenity",
+     "veterinary"
+    ]
+   ],
+   "searches": [
+    "veterinary clinic",
+    "animal hospital"
+   ],
+   "keywords": [
+    "pets",
+    "mascotas",
+    "clients",
+    "surgery",
+    "vaccin",
+    "wellness"
+   ],
+   "subject": {
+    "es": "formularios para sus clientes en español",
+    "en": "your client forms in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que la clínica entrega a los dueños: formularios de admisión, consentimientos de cirugía, instrucciones de cuidado en casa y recordatorios. Cada proyecto lleva un glosario, para que el mismo término diga lo mismo en todos los formularios.",
+    "en": "I translate what clinics hand to pet owners, such as intake forms, surgery consents, home care instructions and reminders. Each project keeps a glossary, so the same term reads the same across every form."
+   }
+  },
+  {
+   "id": "education",
+   "name": "Private schools, daycares and academies",
+   "priority": 2,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "amenity",
+     "kindergarten|childcare|school|college|music_school|driving_school|training"
+    ]
+   ],
+   "searches": [
+    "private school",
+    "daycare center",
+    "vpk preschool",
+    "trade school",
+    "driving school"
+   ],
+   "keywords": [
+    "enroll",
+    "parents",
+    "padres",
+    "students",
+    "tuition",
+    "vpk",
+    "curriculum",
+    "admissions"
+   ],
+   "subject": {
+    "es": "materiales para padres en español",
+    "en": "your parent materials in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que el colegio manda a casa: manual para padres, formularios de matrícula, cartas y reglamentos. Si una familia trae un diploma o unas notas de otro país, también los traduzco con certificado firmado.",
+    "en": "I translate what schools send home, such as the parent handbook, enrollment forms, letters and school policies. If a family brings a diploma or transcript from another country, I also translate it with a signed certificate."
+   }
+  },
+  {
+   "id": "insurance",
+   "name": "Insurance agencies",
+   "priority": 2,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "office",
+     "insurance"
+    ]
+   ],
+   "searches": [
+    "insurance agency",
+    "auto insurance agency",
+    "health insurance agency"
+   ],
+   "keywords": [
+    "policy",
+    "póliza",
+    "auto",
+    "home",
+    "health",
+    "commercial",
+    "quotes",
+    "agents"
+   ],
+   "subject": {
+    "es": "cartas y documentos para sus asegurados en español",
+    "en": "your policyholder letters in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que una agencia de seguros explica a sus clientes: resúmenes de cobertura, cartas, formularios de reclamo y guías. Si un cliente trae un récord de manejo o un documento de otro país, también lo traduzco con certificado firmado.",
+    "en": "I translate what agencies explain to their clients, such as coverage summaries, letters, claim forms and guides. If a client brings a driving record or a document from another country, I also translate it with a signed certificate."
+   }
+  },
+  {
+   "id": "real_estate",
+   "name": "Real estate and property management",
+   "priority": 2,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "office",
+     "estate_agent|property_management|real_estate"
+    ]
+   ],
+   "searches": [
+    "property management company",
+    "hoa management company",
+    "real estate brokerage"
+   ],
+   "keywords": [
+    "tenants",
+    "inquilinos",
+    "residents",
+    "hoa",
+    "condo",
+    "lease",
+    "rentals",
+    "association"
+   ],
+   "subject": {
+    "es": "contratos y avisos para residentes en español",
+    "en": "your leases and resident notices in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que una administradora entrega a inquilinos y propietarios: contratos de arrendamiento, reglamentos, avisos de la asociación y cartas. Cada proyecto lleva un glosario, para que el mismo término diga lo mismo en todos los documentos.",
+    "en": "I translate what managers hand to tenants and owners, such as leases, rules and regulations, association notices and letters. Each project keeps a glossary, so the same term reads the same in every document."
+   }
+  },
+  {
+   "id": "staffing",
+   "name": "Staffing and employment agencies",
+   "priority": 2,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "office",
+     "employment_agency|recruitment"
+    ]
+   ],
+   "searches": [
+    "staffing agency",
+    "employment agency",
+    "temp agency"
+   ],
+   "keywords": [
+    "staffing",
+    "workers",
+    "candidates",
+    "warehouse",
+    "light industrial",
+    "bilingual",
+    "placement"
+   ],
+   "subject": {
+    "es": "el material de ingreso de sus trabajadores en español",
+    "en": "your onboarding material in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que una agencia entrega a sus trabajadores: material de ingreso, el manual del empleado, normas de seguridad y formularios. Cada proyecto lleva un glosario, para que el mismo término diga lo mismo en todos los documentos.",
+    "en": "I translate what agencies hand to their workers, such as onboarding material, the employee handbook, safety rules and forms. Each project keeps a glossary, so the same term reads the same in every document."
+   }
+  },
+  {
+   "id": "hospitality",
+   "name": "Hotels and travel",
+   "priority": 2,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "tourism",
+     "hotel|motel|guest_house|hostel|apartment"
+    ],
+    [
+     "office",
+     "travel_agent"
+    ],
+    [
+     "shop",
+     "travel_agency"
+    ]
+   ],
+   "searches": [
+    "boutique hotel",
+    "travel agency",
+    "tour operator"
+   ],
+   "keywords": [
+    "guests",
+    "huéspedes",
+    "rooms",
+    "tours",
+    "travel",
+    "booking",
+    "latin america"
+   ],
+   "subject": {
+    "es": "su web y sus materiales para huéspedes en español",
+    "en": "your guest materials in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que un hotel o agencia de viajes escribe: la web, información para huéspedes, condiciones de reserva y la capacitación del personal. Cada proyecto lleva un glosario, para que el mismo término diga lo mismo en todos los documentos.",
+    "en": "I translate what hotels and travel companies write themselves, such as the website, guest information, booking terms and staff training. Each project keeps a glossary, so the same term reads the same in every document."
+   }
+  },
+  {
+   "id": "auto",
+   "name": "Dealers and repair shops",
+   "priority": 2,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "shop",
+     "car|car_repair|motorcycle|tyres|truck"
+    ]
+   ],
+   "searches": [
+    "used car dealer",
+    "auto repair shop",
+    "truck dealer"
+   ],
+   "keywords": [
+    "financing",
+    "financiamiento",
+    "warranty",
+    "garantía",
+    "vehicles",
+    "service",
+    "inventory"
+   ],
+   "subject": {
+    "es": "contratos y garantías en español",
+    "en": "your contracts and warranties in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que un concesionario o taller entrega al cliente: contratos de venta, garantías, condiciones de financiamiento y órdenes de servicio. Si un cliente trae un título o una licencia de otro país, también lo traduzco con certificado firmado.",
+    "en": "I translate what dealers and shops hand to customers, such as sales contracts, warranties, financing terms and service orders. If a customer brings a title or a license from another country, I also translate it with a signed certificate."
+   }
+  },
+  {
+   "id": "tech",
+   "name": "Technology and software",
+   "priority": 2,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "office",
+     "it|software|telecommunication"
+    ]
+   ],
+   "searches": [
+    "software company",
+    "it services company",
+    "saas company"
+   ],
+   "keywords": [
+    "software",
+    "platform",
+    "app",
+    "saas",
+    "customers",
+    "latin america",
+    "clients"
+   ],
+   "subject": {
+    "es": "su producto y su web en español",
+    "en": "your product and help pages in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que una empresa de tecnología publica: la web, las páginas de ayuda, los textos de la aplicación y los contratos con clientes. Cada proyecto lleva un glosario, para que el mismo término diga lo mismo en toda la plataforma.",
+    "en": "I translate what tech companies publish, such as the website, help pages, in-app text and customer agreements. Each project keeps a glossary, so the same term reads the same across the whole product."
+   }
+  },
+  {
+   "id": "other_business",
+   "name": "Other companies and offices",
+   "priority": 2,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "office",
+     "company|consulting|engineer|architect|energy_supplier|security|cleaning|research"
+    ]
+   ],
+   "searches": [
+    "commercial cleaning company",
+    "security company",
+    "engineering firm"
+   ],
+   "keywords": [
+    "clients",
+    "employees",
+    "commercial",
+    "services",
+    "projects",
+    "team"
+   ],
+   "subject": {
+    "es": "documentos de su empresa en español",
+    "en": "your company documents in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que las empresas escriben: el manual del empleado, capacitación y seguridad, contratos, formularios y correos a clientes. Cada proyecto lleva un glosario, para que el mismo término diga lo mismo en todos los documentos.",
+    "en": "I translate what companies write themselves, such as the employee handbook, training and safety material, contracts, forms and customer emails. Each project keeps a glossary, so the same term reads the same in every document."
+   }
+  },
+  {
+   "id": "beauty",
+   "name": "Med spas, aesthetics and gyms",
+   "priority": 3,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "shop",
+     "beauty|cosmetics|massage|tattoo"
+    ],
+    [
+     "leisure",
+     "fitness_centre"
+    ],
+    [
+     "healthcare",
+     "cosmetic"
+    ]
+   ],
+   "searches": [
+    "med spa",
+    "aesthetics clinic",
+    "fitness studio"
+   ],
+   "keywords": [
+    "consent",
+    "treatment",
+    "botox",
+    "laser",
+    "membership",
+    "clients"
+   ],
+   "subject": {
+    "es": "consentimientos y formularios en español",
+    "en": "your consent and intake forms in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que el negocio entrega a sus clientes: consentimientos, formularios de admisión, instrucciones después del tratamiento y contratos de membresía.",
+    "en": "I translate what businesses hand to their clients, such as consent forms, intake forms, aftercare instructions and membership agreements."
+   }
+  },
+  {
+   "id": "restaurants",
+   "name": "Restaurants and catering",
+   "priority": 3,
+   "active": true,
+   "offer": "sample",
+   "osm": [
+    [
+     "amenity",
+     "restaurant|cafe|food_court|ice_cream"
+    ]
+   ],
+   "searches": [
+    "catering company",
+    "restaurant group"
+   ],
+   "keywords": [
+    "catering",
+    "events",
+    "locations",
+    "franchise",
+    "kitchen",
+    "staff"
+   ],
+   "subject": {
+    "es": "el manual de su personal en español",
+    "en": "your staff handbook in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que un restaurante escribe para su equipo y sus clientes: el manual del empleado, las normas de inocuidad de la cocina, la capacitación y el menú.",
+    "en": "I translate what restaurants write for their team and guests, such as the employee handbook, kitchen food safety rules, training and the menu."
+   }
+  },
+  {
+   "id": "accounting",
+   "name": "Accountants and tax preparers (partners)",
+   "priority": 1,
+   "active": true,
+   "offer": "referrals",
+   "osm": [
+    [
+     "office",
+     "accountant|tax_advisor|financial|financial_advisor"
+    ]
+   ],
+   "searches": [
+    "tax preparer",
+    "accountant small business",
+    "llc formation services",
+    "registered agent services",
+    "bookkeeping services"
+   ],
+   "keywords": [
+    "llc",
+    "ein",
+    "tax",
+    "impuestos",
+    "registered agent",
+    "bookkeeping",
+    "incorporat",
+    "itin",
+    "payroll"
+   ],
+   "subject": {
+    "es": "traducciones para los clientes que abren empresa con ustedes",
+    "en": "translations for the clients who open companies with you"
+   },
+   "block": {
+    "es": "Hago traducciones certificadas de español a inglés: actas, antecedentes, estados financieros y documentos de empresa, con el certificado firmado que piden las oficinas y los bancos, y notarizadas cuando hace falta la traducción bajo juramento.",
+    "en": "I translate birth and marriage records, police clearances, financial statements and company documents, with the signed certificate that agencies and banks ask for, and notarized when a translation under oath is required."
+   }
+  },
+  {
+   "id": "agencies",
+   "name": "Web and marketing agencies (partners)",
+   "priority": 2,
+   "active": true,
+   "offer": "web",
+   "osm": [
+    [
+     "office",
+     "advertising_agency|marketing|graphic_design|design"
+    ],
+    [
+     "craft",
+     "signmaker|printer"
+    ]
+   ],
+   "searches": [
+    "web design agency",
+    "digital marketing agency",
+    "branding agency"
+   ],
+   "keywords": [
+    "web design",
+    "diseño web",
+    "seo",
+    "marketing",
+    "branding",
+    "clients",
+    "portfolio"
+   ],
+   "subject": {
+    "es": "la versión en español de las webs de sus clientes",
+    "en": "Spanish versions for your clients' websites"
+   },
+   "block": {
+    "es": "Cuando un cliente les pide la versión en español de su web, la traduzco página por página, con los títulos y descripciones listos para Google, y la entrego en el formato con el que trabaja su equipo.",
+    "en": "When a client asks you for the Spanish version of their site, I translate it page by page, with the titles and descriptions ready for search, and deliver it in whatever format your team builds with."
+   }
+  },
+  {
+   "id": "retail",
+   "name": "Independent shops (not chains)",
+   "priority": 3,
+   "active": false,
+   "offer": "sample",
+   "osm": [
+    [
+     "shop",
+     "furniture|electronics|hardware|doityourself|appliance|garden_centre|bicycle|boat|medical_supply|mobility"
+    ]
+   ],
+   "searches": [
+    "furniture store",
+    "medical supply store"
+   ],
+   "keywords": [
+    "warranty",
+    "delivery",
+    "financing",
+    "returns"
+   ],
+   "subject": {
+    "es": "garantías y condiciones de venta en español",
+    "en": "your warranties and terms of sale in Spanish"
+   },
+   "block": {
+    "es": "Traduzco lo que una tienda entrega al cliente: garantías, condiciones de venta y financiamiento, instrucciones y la web.",
+    "en": "I translate what stores hand to customers, such as warranties, terms of sale and financing, instructions and the website."
+   }
+  }
+ ],
+ "always_exclude": {
+  "_why": "Lawyers, government and public schools (they buy by tender), large hospitals (they have a vendor), chains (they decide elsewhere) and competitors.",
+  "osm": [
+   [
+    "office",
+    "lawyer|notary|government|diplomatic|translator|political_party|religion"
+   ],
+   [
+    "amenity",
+    "hospital|townhall|courthouse|police|fire_station|place_of_worship"
+   ],
+   [
+    "craft",
+    "translator"
+   ]
+  ],
+  "name_regex": "law firm|attorney|\\blaw\\b|\\bllp\\b|esq\\.?$|county of|city of|state of|school district|public schools|elementary|middle school|high school|university|hospital|church|ministr"
+ }
+}

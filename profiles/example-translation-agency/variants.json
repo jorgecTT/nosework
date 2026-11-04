@@ -1,0 +1,183 @@
+{
+ "_what_is": "A/B/C test of the offer paragraph. In each email ONLY this part changes: the first line, the sector paragraph and the signature are the same. Each offer has up to three variants (A, B, C); each variant has one entry per locale: [paragraph, closing question]. A variant is assigned once per company and balanced inside each sector (score/draft), then stored in the email, the queue and the contacts file. A single variant (just 'A') means no test.",
+ "experiment": "offer-abc-example",
+ "variant_names": {
+  "A": "with price",
+  "B": "without price",
+  "C": "flexible"
+ },
+ "offers": {
+  "sample": {
+   "A": {
+    "es": [
+     "Para que conozcan el trabajo antes de decidir, les traduzco gratis las 2 primeras páginas de un documento real, una vez por empresa, con una cotización formal válida por 30 días. El material más largo se cotiza por palabra, desde 9 centavos por palabra.",
+     "¿Les sirve enviarme primero el documento que más necesitan en español?"
+    ],
+    "en": [
+     "To see the work before deciding, I translate the first 2 pages of one real document at no cost, once per company, with a formal quote valid for 30 days. Larger material is quoted per word, from 9 cents a word.",
+     "Would it help if you sent me the document you'd want in Spanish first?"
+    ]
+   },
+   "B": {
+    "es": [
+     "Para que conozcan el trabajo antes de decidir, les traduzco gratis las 2 primeras páginas de un documento real, una vez por empresa. Después, la cotización se arma según lo que de verdad necesitan: qué documentos, cuánto material y para cuándo.",
+     "¿Les sirve enviarme primero el documento que más necesitan en español?"
+    ],
+    "en": [
+     "To see the work before deciding, I translate the first 2 pages of one real document at no cost, once per company. After that, the quote is built around what you actually need: which documents, how much material and by when.",
+     "Would it help if you sent me the document you'd want in Spanish first?"
+    ]
+   },
+   "C": {
+    "es": [
+     "Trabajo como le sirva a cada empresa: por proyecto, cada mes o un documento a la vez, y la cotización se ajusta a su volumen y a su presupuesto.",
+     "¿Les sirve una llamada corta esta semana para ver qué tienen en mente?"
+    ],
+    "en": [
+     "I work the way each company prefers: per project, every month or one document at a time, and the quote follows your volume and your budget.",
+     "Would a short call this week help to see what you have in mind?"
+    ]
+   }
+  },
+  "referrals": {
+   "A": {
+    "es": [
+     "A los clientes que ustedes me manden les hago un 25 % de descuento. Si empiezan a mandarme clientes seguido, les preparo una página con su nombre y un código propio.",
+     "¿Les sirve que les mande una muestra para que la vean?"
+    ],
+    "en": [
+     "Clients you refer to me get 25% off. If you start sending clients regularly, I set up a page with your name and your own code.",
+     "Would it help if I sent you a sample to look at?"
+    ]
+   },
+   "B": {
+    "es": [
+     "Los clientes que ustedes me manden reciben condiciones especiales, y si empiezan a mandarme clientes seguido, les preparo una página con su nombre y un código propio.",
+     "¿Les sirve que les mande una muestra para que la vean?"
+    ],
+    "en": [
+     "Clients you refer to me get special terms, and if you start sending clients regularly, I set up a page with your name and your own code.",
+     "Would it help if I sent you a sample to look at?"
+    ]
+   },
+   "C": {
+    "es": [
+     "Podemos acordar la forma que mejor les funcione: condiciones especiales para sus clientes, una página con su nombre o un circuito directo para que me pasen los documentos sin que ustedes se ocupen de nada.",
+     "¿Les sirve una llamada corta esta semana para verlo?"
+    ],
+    "en": [
+     "We can set it up whichever way works best for you: special terms for your clients, a page with your name, or a direct line so your clients send me their documents and you don't have to handle anything.",
+     "Would a short call this week help to work it out?"
+    ]
+   }
+  },
+  "referrals_funeral": {
+   "A": {
+    "es": [
+     "A las familias que ustedes me manden les hago un 25 % de descuento. Si empiezan a mandarme familias seguido, les preparo una página con su nombre y un código propio.",
+     "¿Les sirve que les mande una muestra para que la vean?"
+    ],
+    "en": [
+     "Families you refer to me get 25% off. If you start sending families regularly, I set up a page with your name and your own code.",
+     "Would it help if I sent you a sample to look at?"
+    ]
+   },
+   "B": {
+    "es": [
+     "Las familias que ustedes me manden reciben condiciones especiales, y si empiezan a mandarme familias seguido, les preparo una página con su nombre y un código propio.",
+     "¿Les sirve que les mande una muestra para que la vean?"
+    ],
+    "en": [
+     "Families you refer to me get special terms, and if you start sending families regularly, I set up a page with your name and your own code.",
+     "Would it help if I sent you a sample to look at?"
+    ]
+   },
+   "C": {
+    "es": [
+     "Podemos acordar la forma que mejor les funcione: condiciones especiales para las familias o un circuito directo para que me manden los documentos sin que ustedes se ocupen de nada.",
+     "¿Les sirve una llamada corta esta semana para verlo?"
+    ],
+    "en": [
+     "We can set it up whichever way works best for you: special terms for the families, or a direct line so they send me their documents and you don't have to handle anything.",
+     "Would a short call this week help to work it out?"
+    ]
+   }
+  },
+  "web": {
+   "A": {
+    "es": [
+     "Para que vean el trabajo, les traduzco gratis la página de inicio de la web de uno de sus clientes. Las webs más grandes se cotizan por palabra, desde 9 centavos por palabra, y acordamos cómo prefieren facturarle a su cliente.",
+     "¿Les sirve tener a alguien a quien pasarle la parte en español?"
+    ],
+    "en": [
+     "To see the work, I translate the home page of one of your client sites at no cost. Larger sites are quoted per word, from 9 cents a word, and we can agree how you'd like to bill your client.",
+     "Would it help to have someone you can hand the Spanish part to?"
+    ]
+   },
+   "B": {
+    "es": [
+     "Para que vean el trabajo, les traduzco gratis la página de inicio de la web de uno de sus clientes. Después, cada web se cotiza según su tamaño, y acordamos cómo prefieren facturarle a su cliente.",
+     "¿Les sirve tener a alguien a quien pasarle la parte en español?"
+    ],
+    "en": [
+     "To see the work, I translate the home page of one of your client sites at no cost. After that, each site is quoted on its size, and we can agree how you'd like to bill your client.",
+     "Would it help to have someone you can hand the Spanish part to?"
+    ]
+   },
+   "C": {
+    "es": [
+     "Puedo trabajar bajo su marca, por proyecto o con un acuerdo mensual para todas sus webs, como les acomode mejor con sus clientes.",
+     "¿Les sirve una llamada corta esta semana para verlo?"
+    ],
+    "en": [
+     "I can work under your brand, per project or on a monthly arrangement for all your sites, whichever fits best with your clients.",
+     "Would a short call this week help to see if it fits?"
+    ]
+   }
+  },
+  "localization": {
+   "A": {
+    "es": [
+     "Para que vean cómo quedaría, les traduzco gratis su página de inicio como muestra, una vez por empresa, y les envío una cotización formal válida por 30 días. El resto se cotiza por palabra, desde 9 centavos por palabra.",
+     "¿Les sirve que les mande primero su página de inicio en español?"
+    ],
+    "en": [
+     "To see how it would look, I translate your home page at no cost as a sample, once per company, and send you a formal quote valid for 30 days. The rest is quoted per word, from 9 cents a word.",
+     "Would it help if I sent you your home page in Spanish first?"
+    ]
+   },
+   "B": {
+    "es": [
+     "Para que vean cómo quedaría, les traduzco gratis su página de inicio como muestra, una vez por empresa. La cotización también es gratis y se arma según el tamaño de su web y lo que necesiten: solo las páginas principales o el sitio completo.",
+     "¿Les sirve que les mande primero su página de inicio en español?"
+    ],
+    "en": [
+     "To see how it would look, I translate your home page at no cost as a sample, once per company. The quote is free too, and it follows the size of your site and what you need: just the main pages or the whole site.",
+     "Would it help if I sent you your home page in Spanish first?"
+    ]
+   },
+   "C": {
+    "es": [
+     "Podemos hacerlo como les acomode: todo de una vez, por etapas empezando por las páginas que más visitan, o con un acuerdo mensual que mantiene la versión en español al día cuando cambian la web.",
+     "¿Les sirve una llamada corta esta semana para ver qué páginas les convienen primero?"
+    ],
+    "en": [
+     "We can do it however suits you: all at once, in stages starting with your most visited pages, or on a monthly arrangement that keeps the Spanish version current whenever your site changes.",
+     "Would a short call this week help to see which pages make sense first?"
+    ]
+   }
+  },
+  "new_website": {
+   "A": {
+    "es": [
+     "Antes de hablar de nada, les preparo gratis una maqueta de su página de inicio en los dos idiomas.",
+     "¿Les sirve que se la mande?"
+    ],
+    "en": [
+     "Before anything else, I put together a free mockup of your home page in both languages.",
+     "Would it help if I sent it over?"
+    ]
+   }
+  }
+ }
+}

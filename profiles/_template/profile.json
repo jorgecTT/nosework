@@ -1,0 +1,87 @@
+{
+  "_what_is": "BLANK PROFILE for your own company. Copy this folder to profiles/<your-company>/ and fill every value that says REPLACE_ME (the agent does it for you in the onboarding interview, see SKILL.md). Keys that start with an underscore are documentation and are ignored. Drafting emails refuses to run while REPLACE_ME is left anywhere in the profile.",
+  "company": {
+    "_what_is": "Who you are. own_domains are never prospected (add your own website).",
+    "name": "REPLACE_ME company name",
+    "city": "REPLACE_ME city",
+    "own_domains": [
+      "REPLACE_ME-your-domain.example"
+    ]
+  },
+  "user_agent": "nosework/1.0 (+https://REPLACE_ME-a-page-about-your-bot.example)",
+  "_user_agent_what_is": "Sent with every request. Put a URL where a site owner can read who you are and how to ask you to stop. robots.txt is read with this name.",
+  "settings": {
+    "_what_is": "Overrides for config.json: id_prefix (letters at the start of every contact id), id_base, batch_size (emails per batch in the queue), min_points_for_email (below this score nobody is emailed), pause_per_site_seconds, max_pages_per_site, scan_threads, max_locations and max_employees (above these a company counts as a chain or too large).",
+    "id_prefix": "L",
+    "id_base": 100000,
+    "batch_size": 10,
+    "min_points_for_email": 4
+  },
+  "sender": {
+    "_what_is": "The person the email comes from. signature = lines after the body, one per locale (last line is usually your site). opt_out = how the reader says stop, plus your legal footer: US CAN-SPAM requires a valid physical postal address in every commercial email, and other countries have their own rules (docs/COMPLIANCE.md). The FIRST line of signature and of opt_out is checked in every email.",
+    "from_mailbox": "REPLACE_ME@your-domain.example",
+    "signature": {
+      "en": "REPLACE_ME Your Name\nREPLACE_ME Your Company - City\nyour-domain.example",
+      "es": "REPLACE_ME Your Name\nREPLACE_ME Your Company - City\nyour-domain.example"
+    },
+    "opt_out": {
+      "en": "If you'd rather not hear from me again, just reply \"no\" and I won't write again.\nREPLACE_ME Your Company - Street, City, State, ZIP",
+      "es": "REPLACE_ME opt-out line in Spanish, or delete this locale and the one in locales below.\nREPLACE_ME Your Company - Street, City, State, ZIP"
+    }
+  },
+  "locales": [
+    "en"
+  ],
+  "_locales_what_is": "Languages your emails can be written in. The email language is chosen from the prospect site's <html lang>; sites in any other language get default_locale. Every locale listed here needs an entry in signature, opt_out, variants.json, templates.json and every sector (subject and block). Start with one.",
+  "default_locale": "en",
+  "alt_version": {
+    "_what_is": "Optional. How scan.py recognises that a site ALREADY has the version you would sell (for example a version in another language). html_lang = <html lang> prefix; markers = strings in the page source; link_hints = words in links that lead to that version. Leave markers empty if the idea does not apply to you.",
+    "html_lang": "",
+    "markers": [],
+    "link_hints": []
+  },
+  "exclude_site_patterns": [
+    "REPLACE_ME-competitor-word"
+  ],
+  "banned_phrases": [
+    "REPLACE_ME-banned-phrase"
+  ],
+  "first_line": {
+    "_what_is": "Optional. enumeration_terms: a regex of words for the things you sell; a first line that mentions more than enumeration_max of them is rejected, because the next paragraph already lists what you offer.",
+    "enumeration_terms": "(?!x)x",
+    "enumeration_max": 2
+  },
+  "quality": {
+    "_what_is": "Optional company-specific parts of the first-line quality check. generic_words: place names and trade words that appear on every site (they do not make a line specific). vague_reason_patterns: regexes for filler reasons that fit any company ('where X is widely used'). vague_reason_exempt_patterns: what makes such a line acceptable (a concrete market they serve). unsupported_claim_patterns: regexes for claims about THEIR clients or staff that their site does not make.",
+    "generic_words": [],
+    "vague_reason_patterns": [],
+    "vague_reason_exempt_patterns": [],
+    "unsupported_claim_patterns": [],
+    "unsupported_claim_hint": "State it as a general market fact, not as a claim about their clients or staff."
+  },
+  "scoring": {
+    "_what_is": "How a lead is scored (points = signals + sector priority + size + age + named contact). Below min_points_for_email nobody is emailed.",
+    "priority_points": {
+      "1": 2,
+      "2": 1,
+      "3": 0
+    },
+    "size_points": {
+      "small": 2,
+      "medium": 2,
+      "multi_site": 2,
+      "large": 1
+    },
+    "new_company_years": 2,
+    "new_company_bonus": 1,
+    "named_contact_bonus": 1
+  },
+  "offer_ladder": {
+    "_what_is": "One offer per email. partner_offers: names of sector offers (in variants.json) that always win, for sectors that refer clients to you instead of buying. rules: tried top to bottom, first match wins; 'offer': 'sector' means the offer of the company's own sector (also the fallback). 'when' accepts: sectors, signals_any, signals_all, signals_none (signal ids from signals.json), missing_alt_version (true), site_dated (true). alternates: extra offers a rule can pick, each with active, subject, block (and optional link) per locale, and a matching entry in variants.json. Empty rules = every company gets its sector's offer.",
+    "partner_offers": [],
+    "rules": [],
+    "alternates": {}
+  },
+  "_exclude_site_patterns_what_is": "Regexes (case-insensitive) matched against a site's domain and <title>. Matching sites are never contacted: put your competitors' words here, and conflicts of interest.",
+  "_banned_phrases_what_is": "Words and phrases that must never appear in an email because you cannot back them up (certifications you lack, guarantees you do not give). Universal bans (flattery, cliche openers, accusations, criticism of their website) are already in code."
+}

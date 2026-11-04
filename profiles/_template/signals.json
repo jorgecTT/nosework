@@ -1,0 +1,11 @@
+{
+  "_what_is": "Buying signals: why a company might need what you sell. scan.py looks for each one on the company's own pages and keeps the page and the sentence that prove it; score.py adds the points. Add one object per signal. Fields: id (one or two letters, used in the offer ladder and the CSV), label, points (1 to 3), and a detector. Detectors: 'terms' (plain lowercase substrings searched in the body sentences of the pages), 'patterns' (regexes searched in those sentences), 'phrases' (stronger lowercase phrases searched in the whole page text), 'page_types' (only look on these pages: home, contact, about, team, services, jobs, alt_language, documents), 'kind': 'pdf_links' (counts linked PDFs; 'exclude_patterns' removes those that already look localized), 'kind': 'sector_keywords' (the sector's own keywords from sectors.json confirm the type of business), 'requires' (ids of signals that must have matched first), 'needs_absent': 'alt_version' (only when the site lacks the version you would sell). An empty list is valid: companies are then scored by sector, size and age only.",
+  "_example": {
+    "id": "X",
+    "label": "hires for a role you could replace or support",
+    "points": 3,
+    "page_types": ["jobs"],
+    "terms": ["accounts payable clerk", "bookkeeper"]
+  },
+  "signals": []
+}

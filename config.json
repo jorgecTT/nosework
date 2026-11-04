@@ -1,0 +1,14 @@
+{
+  "_what_is": "Engine settings read by every script. Company-specific values belong in the active profile (profile.json -> 'settings' overrides any key here). Working data goes to <repo>/<work_dir>/<campaign>/ unless NOSEWORK_DATA is set.",
+  "work_dir": "data",
+  "pause_per_site_seconds": 1.5,
+  "max_pages_per_site": 7,
+  "scan_threads": 6,
+  "id_prefix": "L",
+  "id_base": 100000,
+  "batch_size": 10,
+  "min_points_for_email": 4,
+  "max_locations": 10,
+  "max_employees": 1000,
+  "default_user_agent": "nosework/1.0 (+https://github.com/jorgecTT/nosework)"
+}

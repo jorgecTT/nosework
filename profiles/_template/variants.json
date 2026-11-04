@@ -1,0 +1,15 @@
+{
+  "_what_is": "The offer paragraphs. One entry per offer name; each offer has up to three variants (A, B, C) for an A/B/C test, and each variant has one entry per locale: [paragraph, closing question]. In an email ONLY this part changes between variants. A variant is assigned once per company and balanced inside each sector. With a single variant 'A' there is no test. Every sector in sectors.json points to one offer name.",
+  "experiment": "offer-test-1",
+  "variant_names": {"A": "REPLACE_ME what A tests"},
+  "offers": {
+    "default": {
+      "A": {
+        "en": [
+          "REPLACE_ME one or two sentences: what you offer and the easy first step (a free sample, a short call).",
+          "REPLACE_ME one short closing question."
+        ]
+      }
+    }
+  }
+}

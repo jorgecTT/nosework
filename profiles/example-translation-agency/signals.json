@@ -1,0 +1,45 @@
+{
+  "_what_is": "Buying signals: why this company might need what you sell. scan.py looks for each signal on the company's own pages and keeps the page and the sentence that prove it. Each signal: id (one or two letters, used in the offer ladder and the CSV), label, points, and one detector. Detectors: 'terms' (plain substrings searched in the body sentences of the pages), 'phrases' (stronger phrases searched in the whole page text), 'page_types' (only look on these pages: home, contact, about, team, services, jobs, alt_language, documents), 'kind': 'pdf_links' (count linked PDFs, 'exclude_patterns' removes the ones that already look localized), 'kind': 'sector_keywords' (the sector's own keywords from sectors.json), 'requires' (signal ids that must have matched), 'needs_absent': 'alt_version' (only when the site has no version in your target language). Points add up in score.py.",
+  "signals": [
+    {
+      "id": "H",
+      "label": "serves or speaks to a Hispanic audience",
+      "points": 2,
+      "terms": ["español", "spanish", "hispan", "latino", "latina", "bilingüe", "bilingual", "se habla", "hablamos"],
+      "phrases": ["se habla español", "hablamos español", "we speak spanish", "spanish speaking", "spanish-speaking", "bilingual staff", "bilingual team", "atención en español", "atendemos en español", "personal bilingüe", "english and spanish", "english & spanish", "hispanic community", "comunidad hispana", "latino community", "hispanic market", "latin american market"]
+    },
+    {
+      "id": "E",
+      "label": "says it serves Hispanic customers and the site has no Spanish version",
+      "points": 3,
+      "requires": ["H"],
+      "needs_absent": "alt_version"
+    },
+    {
+      "id": "B",
+      "label": "hires bilingual staff",
+      "points": 3,
+      "page_types": ["jobs"],
+      "terms": ["bilingual", "bilingüe", "spanish a plus", "spanish preferred", "fluent in spanish", "spanish required", "english and spanish", "english/spanish"]
+    },
+    {
+      "id": "I",
+      "label": "works with other countries or imports/exports",
+      "points": 2,
+      "terms": ["latin america", "latinoamérica", "latinoamerica", "central america", "south america", "caribbean", "puerto rico", "mexico", "méxico", "colombia", "venezuela", "dominican", "guatemala", "honduras", "el salvador", "peru", "perú", "ecuador", "argentina", "chile", "brazil", "export", "import", "international clients", "clientes internacionales", "worldwide", "overseas"]
+    },
+    {
+      "id": "S",
+      "label": "its site confirms the type of business",
+      "points": 1,
+      "kind": "sector_keywords"
+    },
+    {
+      "id": "D",
+      "label": "publishes PDF documents in English only",
+      "points": 2,
+      "kind": "pdf_links",
+      "exclude_patterns": ["span", "espa", "[_-]es[_.-]"]
+    }
+  ]
+}

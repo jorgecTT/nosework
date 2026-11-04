@@ -1,0 +1,232 @@
+{
+  "_what_is": "Profile of a FICTIONAL company (Acme Translations, Springfield). Everything company-specific lives in this folder: who you are, what you sell, what counts as a buying signal, what you never say and who you never contact. Copy profiles/_template to describe your own company.",
+  "company": {
+    "name": "Acme Translations",
+    "city": "Springfield",
+    "own_domains": [
+      "example.com"
+    ]
+  },
+  "user_agent": "nosework/1.0 (+https://example.com/nosework-bot)",
+  "settings": {
+    "id_prefix": "L",
+    "id_base": 100000,
+    "batch_size": 10,
+    "min_points_for_email": 4
+  },
+  "sender": {
+    "from_mailbox": "alex@example.com",
+    "signature": {
+      "en": "Alex Example\nAcme Translations · Springfield\nexample.com/business/",
+      "es": "Alex Example\nAcme Translations · Springfield\nexample.com/business/"
+    },
+    "opt_out": {
+      "en": "If you'd rather not hear from me again, just reply \"no\".\nAcme Translations · 123 Example Street, Springfield, ST 00000",
+      "es": "Si prefieren que no les vuelva a escribir, respondan «no» y no lo haré.\nAcme Translations · 123 Example Street, Springfield, ST 00000"
+    }
+  },
+  "locales": [
+    "en",
+    "es"
+  ],
+  "default_locale": "en",
+  "alt_version": {
+    "_what_is": "How a site is recognised as already having the version you would sell (here: a Spanish version). If the site has it, offers that need it absent (localization) are not made.",
+    "html_lang": "es",
+    "markers": [
+      "lang=\"es",
+      "lang='es",
+      "hreflang=\"es",
+      "/es/",
+      "gtranslate",
+      "weglot",
+      "translate.google",
+      "google_translate_element",
+      ">espanol<",
+      "conveythis",
+      "localizejs"
+    ],
+    "link_hints": [
+      "/es/",
+      "/es",
+      "espanol",
+      "spanish"
+    ]
+  },
+  "exclude_site_patterns": [
+    "translat",
+    "traduc",
+    "interpret",
+    "locali[sz]ation",
+    "language services",
+    "lionbridge"
+  ],
+  "banned_phrases": [
+    "human translation",
+    "human translator",
+    "native speaker",
+    "certified translator",
+    "official translation",
+    "official spanish",
+    "precise spanish translation",
+    "accurate spanish translation",
+    "accurate translation",
+    "poorly translated",
+    "machine translated",
+    "uscis-compliant",
+    "traduccion humana",
+    "traducción humana",
+    "traductor humano",
+    "nativo",
+    "traductor certificado",
+    "traducción oficial",
+    "traducciones oficiales",
+    "mal traducido"
+  ],
+  "first_line": {
+    "enumeration_terms": "spec sheets?|labels?|manuals?|handbooks?|contracts?|warranties|fichas|etiquetas|manuales|contratos|garantías",
+    "enumeration_max": 2
+  },
+  "quality": {
+    "_what_is": "Company-specific parts of the first-line quality check. The universal rules (needs 2 words only that site uses, repeated ending, fill-in-the-blank template) are in code.",
+    "generic_words": [
+      "south",
+      "florida",
+      "miami",
+      "dade",
+      "broward",
+      "palm",
+      "beach",
+      "springfield",
+      "area",
+      "region",
+      "spanish",
+      "english",
+      "español",
+      "inglés"
+    ],
+    "vague_reason_patterns": [
+      "where spanish is (widely|commonly|also|part|an everyday|central|used|spoken)",
+      "spanish (can|could) (help|make|clarify)",
+      "spanish helps",
+      "spanish-language explanations",
+      "(may|might) (want|need|prefer) to (discuss|explain|understand)[^.]{0,40}spanish",
+      "who (may )?prefer spanish",
+      "multilingual (city|communities|community)"
+    ],
+    "vague_reason_exempt_patterns": [
+      "latin america|latam|mexic|colombia|venezuel|dominican|puerto ric|cuba|central america|south america|argentin|chile|peru|ecuador|guatemala|hondura|salvador|nicaragua|panam|costa rica|bolivia|paraguay|uruguay"
+    ],
+    "unsupported_claim_patterns": [
+      "\\b(your|their|its|his|her)\\b(?:\\s+\\w+){0,6}?\\s+(clients?|customers?|staff|team|employees|workers|crews?|owners|patients|families|buyers)\\b[^.]{0,60}?\\b(speak|speaks|read|reads|work|works|prefer|prefers)\\b[^.]{0,25}?\\bspanish",
+      "\\b(you|they)\\s+(sell to|serve|supply|work with|deliver to)\\b[^.]{0,60}?\\b(speak|read|work)\\w*\\b[^.]{0,25}?\\bspanish"
+    ],
+    "unsupported_claim_hint": "Say it as a general market fact (\"in this region a lot of kitchens work in Spanish\"), not as a claim about their clients or staff."
+  },
+  "scoring": {
+    "priority_points": {
+      "1": 2,
+      "2": 1,
+      "3": 0
+    },
+    "size_points": {
+      "small": 2,
+      "medium": 2,
+      "multi_site": 2,
+      "large": 1
+    },
+    "new_company_years": 2,
+    "new_company_bonus": 1,
+    "named_contact_bonus": 1
+  },
+  "offer_ladder": {
+    "_what_is": "One offer per email. 'partner_offers' = sector offers that always win (partners refer clients, they are not buyers). 'rules' are tried top to bottom, the first match wins; 'sector' means the offer of the company's own sector (the fallback). 'when' accepts: sectors, signals_any, signals_all, signals_none, missing_alt_version, site_dated. 'alternates' define extra offers (subject, paragraph, optional signature link) that a rule can pick.",
+    "partner_offers": [
+      "referrals",
+      "referrals_funeral",
+      "web"
+    ],
+    "rules": [
+      {
+        "offer": "localization",
+        "when": {
+          "sectors": [
+            "health",
+            "veterinary",
+            "insurance",
+            "real_estate",
+            "auto",
+            "beauty",
+            "education",
+            "care",
+            "restaurants",
+            "hospitality",
+            "retail"
+          ],
+          "missing_alt_version": true
+        },
+        "reason": "public-facing sector and the site has no Spanish version"
+      },
+      {
+        "offer": "sector",
+        "when": {
+          "signals_any": [
+            "B",
+            "D",
+            "I"
+          ]
+        },
+        "reason": "the site shows document work"
+      },
+      {
+        "offer": "localization",
+        "when": {
+          "signals_all": [
+            "E"
+          ]
+        },
+        "reason": "serves Spanish speakers and the site has no Spanish version"
+      },
+      {
+        "offer": "new_website",
+        "when": {
+          "site_dated": true,
+          "missing_alt_version": true,
+          "signals_none": [
+            "H",
+            "E"
+          ]
+        },
+        "reason": "dated site, no Spanish version, no other signal"
+      }
+    ],
+    "alternates": {
+      "localization": {
+        "active": true,
+        "subject": {
+          "en": "a Spanish version of your website",
+          "es": "la versión en español de su web"
+        },
+        "block": {
+          "en": "I translate websites into Spanish: every page, the menus, the forms and the titles and descriptions Google reads, so people searching in Spanish find you. I deliver in whatever format is easiest for you, with no change of platform, and each project keeps a glossary so the same term reads the same across the whole site.",
+          "es": "Traduzco webs al español: cada página, los menús, los formularios y los títulos y descripciones que lee Google, para que quien busca en español los encuentre. Entrego en el formato que les resulte más fácil, sin cambiar de plataforma, y cada proyecto lleva un glosario para que el mismo término diga lo mismo en todo el sitio."
+        },
+        "link": {
+          "en": "example.com/en/business/website-translation/",
+          "es": "example.com/business/traduccion-de-sitios-web/"
+        }
+      },
+      "new_website": {
+        "active": false,
+        "subject": {
+          "en": "your website in English and Spanish",
+          "es": "su web en español y en inglés"
+        },
+        "block": {
+          "en": "I build new websites in English and Spanish from the start: fast, made for phones, and with the titles and descriptions Google reads in both languages, so people searching in Spanish find you.",
+          "es": "Hago webs nuevas en inglés y en español desde el principio: rápidas, pensadas para el celular y con los títulos y descripciones que lee Google en los dos idiomas, para que quien busca en español los encuentre."
+        }
+      }
+    }
+  }
+}

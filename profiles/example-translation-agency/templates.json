@@ -1,0 +1,9 @@
+{
+  "_what_is": "Fixed pieces of the email that are not offers or signature: the greeting (by locale) and the lines of the short message for contact forms. Placeholders: {first} first name of the contact, {name} company name, {mailbox} the sender mailbox.",
+  "greeting": {
+    "en": {"person": "Hello {first},", "team": "Hello {name} team,", "anonymous": "Hello,"},
+    "es": {"person": "Hola, {first}:", "team": "Hola, equipo de {name}:", "anonymous": "Hola:"}
+  },
+  "form_reply_line": {"en": "My email: {mailbox}", "es": "Mi correo: {mailbox}"},
+  "form_signature": "Alex Example · Acme Translations"
+}

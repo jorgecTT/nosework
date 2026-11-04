@@ -1,0 +1,256 @@
+{
+ "_what_is": "Work order by state or region. Counties use the exact name OpenStreetMap has (admin_level 6) and are listed in the order you want to work them. 'cities' are used for web searches (source brave). 'name' is the text a company's site must mention to count as being in that state. 'registry' is optional (see docs/REGIONS.md). To add a state, county or country: copy an entry, set 'iso' to the ISO 3166-2 code OpenStreetMap uses (for example US-OH, CA-ON, GB-ENG) and list the administrative areas at the level you want to search. Everything here is sample data.",
+ "states": {
+  "FL": {
+   "name": "Florida",
+   "iso": "US-FL",
+   "registry": "fl_sunbiz_local",
+   "counties": [
+    {
+     "county": "Miami-Dade County",
+     "cities": [
+      "Miami",
+      "Hialeah",
+      "Doral",
+      "Miami Gardens",
+      "Homestead"
+     ]
+    },
+    {
+     "county": "Broward County",
+     "cities": [
+      "Fort Lauderdale",
+      "Plantation",
+      "Hollywood",
+      "Miramar",
+      "Coral Springs"
+     ]
+    },
+    {
+     "county": "Palm Beach County",
+     "cities": [
+      "West Palm Beach",
+      "Boca Raton",
+      "Boynton Beach",
+      "Lake Worth"
+     ]
+    },
+    {
+     "county": "Orange County",
+     "cities": [
+      "Orlando",
+      "Apopka",
+      "Winter Park"
+     ]
+    },
+    {
+     "county": "Osceola County",
+     "cities": [
+      "Kissimmee",
+      "St. Cloud"
+     ]
+    },
+    {
+     "county": "Hillsborough County",
+     "cities": [
+      "Tampa",
+      "Brandon",
+      "Plant City"
+     ]
+    },
+    {
+     "county": "Duval County",
+     "cities": [
+      "Jacksonville"
+     ]
+    },
+    {
+     "county": "Pinellas County",
+     "cities": [
+      "St. Petersburg",
+      "Clearwater"
+     ]
+    },
+    {
+     "county": "Lee County",
+     "cities": [
+      "Fort Myers",
+      "Cape Coral"
+     ]
+    },
+    {
+     "county": "Polk County",
+     "cities": [
+      "Lakeland",
+      "Winter Haven"
+     ]
+    },
+    {
+     "county": "Seminole County",
+     "cities": [
+      "Sanford",
+      "Altamonte Springs"
+     ]
+    },
+    {
+     "county": "Collier County",
+     "cities": [
+      "Naples",
+      "Immokalee"
+     ]
+    }
+   ]
+  },
+  "TX": {
+   "name": "Texas",
+   "iso": "US-TX",
+   "registry": "tx_franchise",
+   "counties": [
+    {
+     "county": "Harris County",
+     "cities": [
+      "Houston",
+      "Pasadena",
+      "Baytown"
+     ]
+    },
+    {
+     "county": "Dallas County",
+     "cities": [
+      "Dallas",
+      "Irving",
+      "Garland",
+      "Grand Prairie"
+     ]
+    },
+    {
+     "county": "Bexar County",
+     "cities": [
+      "San Antonio"
+     ]
+    },
+    {
+     "county": "Tarrant County",
+     "cities": [
+      "Fort Worth",
+      "Arlington"
+     ]
+    },
+    {
+     "county": "Travis County",
+     "cities": [
+      "Austin"
+     ]
+    },
+    {
+     "county": "El Paso County",
+     "cities": [
+      "El Paso"
+     ]
+    },
+    {
+     "county": "Hidalgo County",
+     "cities": [
+      "McAllen",
+      "Edinburg",
+      "Pharr"
+     ]
+    },
+    {
+     "county": "Cameron County",
+     "cities": [
+      "Brownsville",
+      "Harlingen"
+     ]
+    },
+    {
+     "county": "Webb County",
+     "cities": [
+      "Laredo"
+     ]
+    },
+    {
+     "county": "Fort Bend County",
+     "cities": [
+      "Sugar Land",
+      "Missouri City"
+     ]
+    },
+    {
+     "county": "Collin County",
+     "cities": [
+      "Plano",
+      "McKinney",
+      "Frisco"
+     ]
+    },
+    {
+     "county": "Denton County",
+     "cities": [
+      "Denton",
+      "Lewisville"
+     ]
+    }
+   ]
+  },
+  "NY": {
+   "name": "New York",
+   "iso": "US-NY",
+   "registry": "ny_corporations",
+   "counties": [
+    {
+     "county": "Queens County",
+     "cities": [
+      "Queens",
+      "Jackson Heights",
+      "Corona",
+      "Flushing"
+     ]
+    },
+    {
+     "county": "Bronx County",
+     "cities": [
+      "Bronx"
+     ]
+    },
+    {
+     "county": "Kings County",
+     "cities": [
+      "Brooklyn"
+     ]
+    },
+    {
+     "county": "New York County",
+     "cities": [
+      "Manhattan",
+      "Washington Heights"
+     ]
+    },
+    {
+     "county": "Westchester County",
+     "cities": [
+      "Yonkers",
+      "White Plains",
+      "New Rochelle"
+     ]
+    },
+    {
+     "county": "Suffolk County",
+     "cities": [
+      "Brentwood",
+      "Central Islip",
+      "Riverhead"
+     ]
+    },
+    {
+     "county": "Nassau County",
+     "cities": [
+      "Hempstead",
+      "Freeport",
+      "Long Beach"
+     ]
+    }
+   ]
+  }
+ }
+}

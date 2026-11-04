@@ -1,0 +1,22 @@
+{
+  "_what_is": "One entry per type of business you want to find. 'osm' = OpenStreetMap tag filters [key, regex] (a business matches if ANY filter matches; see https://wiki.openstreetmap.org/wiki/Map_features); 'searches' = web search terms (Brave) combined with each city; 'keywords' = lowercase words that confirm on the company's own site that it is this type of business; 'subject' and 'block' = the email subject (lowercase, no sales hook) and the paragraph describing what you offer this type of business, one per locale; 'offer' = which entry of variants.json it uses; 'priority' 1 = best, 3 = worst; 'active': false switches a sector off. Delete the sample and add yours. 'always_exclude' lists what is never contacted, whatever the sector.",
+  "sectors": [
+    {
+      "id": "sample-sector",
+      "name": "REPLACE_ME Sample sector (for example: independent dental practices)",
+      "priority": 1,
+      "active": false,
+      "offer": "default",
+      "osm": [["healthcare", "dentist"], ["amenity", "dentist"]],
+      "searches": ["dental office", "family dentist"],
+      "keywords": ["patients", "new patient", "insurance"],
+      "subject": {"en": "REPLACE_ME subject without hype"},
+      "block": {"en": "REPLACE_ME one paragraph: what you do for this kind of business, in their words."}
+    }
+  ],
+  "always_exclude": {
+    "_why": "Whom you never contact, whatever the sector: government, large hospitals, chains, competitors.",
+    "osm": [["office", "government|diplomatic|political_party|religion"], ["amenity", "hospital|townhall|courthouse|police|fire_station|place_of_worship"]],
+    "name_regex": "county of|city of|state of|school district|public schools|university|hospital|church|ministr"
+  }
+}

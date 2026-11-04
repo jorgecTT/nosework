@@ -1,0 +1,8 @@
+{
+  "_what_is": "Fixed pieces of the email that are not offers or signature: the greeting (by locale) and the lines of the short message for contact forms. Placeholders: {first} first name of the contact, {name} company name, {mailbox} the sender mailbox. 'person' is used when the chosen email belongs to a named person, 'team' when only the company is known, 'anonymous' when even the company name is unreliable.",
+  "greeting": {
+    "en": {"person": "Hello {first},", "team": "Hello {name} team,", "anonymous": "Hello,"}
+  },
+  "form_reply_line": {"en": "My email: {mailbox}"},
+  "form_signature": "REPLACE_ME Your Name - Your Company"
+}
