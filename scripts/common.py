@@ -256,6 +256,12 @@ def robots_for(base: str):
     return rp
 
 
+# Public Overpass (OpenStreetMap) mirrors, tried in order. They are volunteer-run and go down often:
+# set NOSEWORK_OVERPASS to a comma-separated list of your own (or a private) endpoint to override.
+OVERPASS = [u.strip() for u in os.environ.get('NOSEWORK_OVERPASS', '').split(',') if u.strip()] or [
+    'https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter',
+    'https://overpass.private.coffee/api/interpreter', 'https://maps.mail.ru/osm/tools/overpass/api/interpreter']
+
 def env_key(name: str) -> str:
     """API keys from the environment first, then from the repo's .env (never printed)."""
     if os.environ.get(name):

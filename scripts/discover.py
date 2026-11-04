@@ -18,10 +18,9 @@ import re
 import time
 import urllib.parse
 
-from common import (DIRECTORIES, EXCLUDED_SITE, LISTICLE, ROOT, add_profile_arg, always_exclude, append_jsonl,
+from common import (DIRECTORIES, EXCLUDED_SITE, LISTICLE, OVERPASS, ROOT, add_profile_arg, always_exclude, append_jsonl,
                     campaign_dir, campaigns, domain, env_key, get_json, load_sectors, log, read_jsonl)
 
-OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter']
 REGIONS = json.loads((ROOT / 'references' / 'regions.json').read_text(encoding='utf-8'))['states']
 EXCLUDE = always_exclude()
 EXCLUDE_NAME = re.compile(EXCLUDE['name_regex'], re.I) if EXCLUDE.get('name_regex') else re.compile(r'(?!x)x')

@@ -51,6 +51,8 @@ The run pauses at the draft step so the agent can write the first lines (see `SK
 python3 scripts/prospect.py --campaign demo --from draft
 ```
 
+> **OpenStreetMap down?** The free Overpass servers are volunteer-run and often overloaded. nosework tries four mirrors, and you can set `NOSEWORK_OVERPASS` to your own. With a free Brave Search key in `.env` it still finds companies when OpenStreetMap is unavailable (`--source brave`).
+
 ## Make it yours
 
 Everything about your business lives in a profile folder: offer, sectors, signals, signature, opt-out, banned phrases, exclusions.

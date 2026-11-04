@@ -4,7 +4,7 @@
   profile      the active profile loads (and is not still the blank template)
   data dir     the data folder can be written
   internet     the agent can open a website (without this nothing works: stop and say so)
-  overpass     OpenStreetMap search (both public mirrors). Optional: without it Brave still finds companies
+  overpass     OpenStreetMap search (the public mirrors; set NOSEWORK_OVERPASS to use your own). Optional: without it Brave still finds companies
   brave        a Brave Search key in .env or the environment. Optional: without it only OpenStreetMap is used
 
 Exit code 0 when nosework can run (python, profile and internet work), 1 when it can't.
@@ -16,9 +16,8 @@ import urllib.parse
 import urllib.request
 
 import common
-from common import CTX, UA, env_key, get_json
+from common import CTX, OVERPASS, UA, env_key, get_json
 
-OVERPASS = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter']
 TEST_URL = 'https://example.com/'
 
 
